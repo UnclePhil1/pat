@@ -1,5 +1,6 @@
 import "./App.css";
 import Footer from "./components/footer";
+import Toaster from "./components/ui/toaster";
 import { FormWaitList } from "./components/form";
 import Founders from "./components/founders";
 import Header from "./components/header";
@@ -13,9 +14,10 @@ import Waitlist from "./components/waitlist";
 function App() {
   return (
     <>
+      <Toaster />
       <div className="p-6">
         <Navbar />
-  <Header />
+        <Header />
         <section id="problem"><Problem /></section>
         <section id="solution"><Solution /></section>
         <section id="howitworks"><HowItWorks /></section>

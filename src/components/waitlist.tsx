@@ -10,8 +10,6 @@ export default function Waitlist() {
         gridTemplateColumns: "1fr 1fr",
         gap: "2rem",
         alignItems: "center",
-        minHeight: "60vh",
-        padding: "2rem",
       }}
       className="bg-gradient-to-b from-[#06B6D4] to-[#2563EB] rounded-lg mt-12"
     >
@@ -32,7 +30,7 @@ export default function Waitlist() {
           alignItems: "flex-start",
         }}
       >
-        <h2 className="text-white font-bold text-3xl">
+        <h2 className="text-white font-bold text-2xl">
           PAT is more than a bot. She&apos;s your community&apos;s secret
           weapon. She makes your Telegram community
         </h2>
@@ -40,7 +38,7 @@ export default function Waitlist() {
           {bulletPoints.map((point, idx) => (
             <li
               key={idx}
-              className="text-white text-lg flex items-center gap-2 my-2"
+              className="text-white text-md flex items-center gap-2 my-2"
             >
               <span className="inline-block w-2 h-2 bg-white rounded-full mt-2"></span>
 
