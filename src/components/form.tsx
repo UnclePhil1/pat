@@ -20,7 +20,7 @@ export function FormWaitList() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState('');
+  const [success, _setSuccess] = useState('');
   const [error, setError] = useState('');
 
  const handleSubmit = async (e: React.FormEvent) => {
