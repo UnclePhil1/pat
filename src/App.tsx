@@ -1,20 +1,21 @@
 import "./App.css";
-import Footer from "./components/footer";
-import Toaster from "./components/ui/toaster";
-import { FormWaitList } from "./components/form";
-import Founders from "./components/founders";
-import Header from "./components/header";
-import HowItWorks from "./components/howItWorks";
-import Navbar from "./components/navbar";
-import Problem from "./components/problem";
-import Setup from "./components/setUp";
-import Solution from "./components/solution";
-import Waitlist from "./components/waitlist";
+// import Footer from "./components/footer";
+// import Toaster from "./components/ui/toaster";
+// import { FormWaitList } from "./components/form";
+// import Founders from "./components/founders";
+// import Header from "./components/header";
+// import HowItWorks from "./components/howItWorks";
+// import Navbar from "./components/navbar";
+// import Problem from "./components/problem";
+// import Setup from "./components/setUp";
+// import Solution from "./components/solution";
+// import Waitlist from "./components/waitlist";
+import PatLanding from "./components/PatLanding";
 
 function App() {
   return (
     <>
-      <Toaster />
+      {/* <Toaster />
       <div className="p-6">
         <Navbar />
         <Header />
@@ -26,7 +27,8 @@ function App() {
         <section id="waitlist"><Waitlist /></section>
         <section id="formwaitlist"><FormWaitList /></section>
       </div>
-      <Footer />
+      <Footer /> */}
+      <PatLanding />
     </>
   );
 }
