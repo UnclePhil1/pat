@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import Logo from "../../public/images/logow.svg";
 
 const PatLanding: React.FC = () => {
   return (
@@ -7,7 +8,8 @@ const PatLanding: React.FC = () => {
 
       <div className="container">
         <nav>
-          <div className="logo">PAT</div>
+          <img src={Logo} alt="Pat logo" className="w-20 h-20" />
+
           <ul className="nav-links">
             <li>
               <a href="#pricing">Pricing</a>
@@ -26,11 +28,15 @@ const PatLanding: React.FC = () => {
 
       <section className="hero">
         <div className="container">
-          <div className="hero-badge">🚀 Your 24/7 Telegram Project Assistant</div>
+          <div className="hero-badge">
+            🚀 Your 24/7 Telegram Project Assistant
+          </div>
           <h1>
             Transform Your Telegram
-            <br />Community Into a 24/7
-            <br />Growth Engine
+            <br />
+            Community Into a 24/7
+            <br />
+            Growth Engine
           </h1>
           <p className="hero-subheadline">
             PAT automates moderation, runs DM campaigns, and manages your
@@ -46,7 +52,8 @@ const PatLanding: React.FC = () => {
         <div className="container">
           <h2 className="story-headline">
             You're losing members every hour
-            <br />you ignore your Telegram community.
+            <br />
+            you ignore your Telegram community.
           </h2>
           <p className="story-subheadline">
             The biggest reason Web3 projects fail isn't the tech — it's
@@ -56,15 +63,17 @@ const PatLanding: React.FC = () => {
           <div className="story-content">
             <p>
               Every founder starts with hype — then burnout hits. 24/7
-              questions. Spam bots. Silent channels. Missed updates. Before long,
-              the community you worked so hard to build turns into a ghost town.
+              questions. Spam bots. Silent channels. Missed updates. Before
+              long, the community you worked so hard to build turns into a ghost
+              town.
             </p>
 
             <p>
-              That's why we built <strong>PAT — your Telegram Project Assistant</strong>.
-              She never sleeps. She never misses a question. She moderates,
-              messages, educates, and even runs your campaigns — all while
-              keeping your brand voice intact.
+              That's why we built{" "}
+              <strong>PAT — your Telegram Project Assistant</strong>. She never
+              sleeps. She never misses a question. She moderates, messages,
+              educates, and even runs your campaigns — all while keeping your
+              brand voice intact.
             </p>
 
             <p>
@@ -76,34 +85,68 @@ const PatLanding: React.FC = () => {
 
           <div className="imagine-section">
             <h3>Imagine This</h3>
-            <p style={{ textAlign: 'center', color: '#999', marginBottom: 40, fontSize: 18 }}>
+            <p
+              style={{
+                textAlign: "center",
+                color: "#999",
+                marginBottom: 40,
+                fontSize: 18,
+              }}
+            >
               You wake up to:
             </p>
             <div className="imagine-list">
               <div className="imagine-item">Zero spam in your group</div>
-              <div className="imagine-item">Members discussing your latest update automatically</div>
-              <div className="imagine-item">New users greeted, educated, and already participating</div>
-              <div className="imagine-item">DM campaigns bringing users back daily</div>
-              <div className="imagine-item">A full report showing your top contributors and growth metrics</div>
+              <div className="imagine-item">
+                Members discussing your latest update automatically
+              </div>
+              <div className="imagine-item">
+                New users greeted, educated, and already participating
+              </div>
+              <div className="imagine-item">
+                DM campaigns bringing users back daily
+              </div>
+              <div className="imagine-item">
+                A full report showing your top contributors and growth metrics
+              </div>
             </div>
-            <p style={{ textAlign: 'center', marginTop: 40, fontSize: 22, color: '#FFD700', fontWeight: 700 }}>
+            <p
+              style={{
+                textAlign: "center",
+                marginTop: 40,
+                fontSize: 22,
+                color: "#FFD700",
+                fontWeight: 700,
+              }}
+            >
               That's PAT — your all-in-one automation and management engine.
             </p>
           </div>
 
           <div className="benefits-grid">
             <div className="benefit-card">Save 80% of your moderation time</div>
-            <div className="benefit-card">Boost community retention by 40%+</div>
-            <div className="benefit-card">Keep members active even when you're offline</div>
-            <div className="benefit-card">Run referral & engagement campaigns automatically</div>
-            <div className="benefit-card">Get clear data on what's working (and what's not)</div>
+            <div className="benefit-card">
+              Boost community retention by 40%+
+            </div>
+            <div className="benefit-card">
+              Keep members active even when you're offline
+            </div>
+            <div className="benefit-card">
+              Run referral & engagement campaigns automatically
+            </div>
+            <div className="benefit-card">
+              Get clear data on what's working (and what's not)
+            </div>
           </div>
         </div>
       </section>
 
       <div className="pricing-intro">
         <div className="container">
-          <h2>Whether you're just starting your community or scaling to thousands of members</h2>
+          <h2>
+            Whether you're just starting your community or scaling to thousands
+            of members
+          </h2>
           <p>There's a PAT plan that fits you perfectly.</p>
         </div>
       </div>
@@ -114,7 +157,9 @@ const PatLanding: React.FC = () => {
             <div className="pricing-card">
               <div className="pricing-icon">🧠</div>
               <h3 className="pricing-name">PAT BASIC</h3>
-              <p className="pricing-tagline">Let PAT handle the chaos — your community, always protected.</p>
+              <p className="pricing-tagline">
+                Let PAT handle the chaos — your community, always protected.
+              </p>
               <div className="pricing-price">$99</div>
               <div className="pricing-period">/month</div>
               <div className="pricing-save">$950/yr (Save 20%)</div>
@@ -128,7 +173,9 @@ const PatLanding: React.FC = () => {
                 <li>Up to 2,000 community members</li>
               </ul>
 
-              <a href="#contact" className="pricing-cta">Start for $99 →</a>
+              <a href="#contact" className="pricing-cta">
+                Start for $99 →
+              </a>
               <div className="pricing-subtext">Try risk-free for 14 days</div>
             </div>
 
@@ -136,7 +183,10 @@ const PatLanding: React.FC = () => {
               <div className="popular-badge">🔥 Most Popular</div>
               <div className="pricing-icon">🚀</div>
               <h3 className="pricing-name">PAT PLUS</h3>
-              <p className="pricing-tagline">Automation meets growth — campaigns, data, and engagement on autopilot.</p>
+              <p className="pricing-tagline">
+                Automation meets growth — campaigns, data, and engagement on
+                autopilot.
+              </p>
               <div className="pricing-price">$299</div>
               <div className="pricing-period">/month</div>
               <div className="pricing-save">$2,870/yr (Save 20%)</div>
@@ -151,14 +201,20 @@ const PatLanding: React.FC = () => {
                 <li>Up to 10,000 members</li>
               </ul>
 
-              <a href="#contact" className="pricing-cta">Get PAT PLUS →</a>
-              <div className="pricing-subtext">Most founders start here — proven ROI in 30 days</div>
+              <a href="#contact" className="pricing-cta">
+                Get PAT PLUS →
+              </a>
+              <div className="pricing-subtext">
+                Most founders start here — proven ROI in 30 days
+              </div>
             </div>
 
             <div className="pricing-card pro">
               <div className="pricing-icon">👑</div>
               <h3 className="pricing-name">PAT PRO</h3>
-              <p className="pricing-tagline">We don't just automate — we run your community.</p>
+              <p className="pricing-tagline">
+                We don't just automate — we run your community.
+              </p>
               <div className="pricing-price">$999</div>
               <div className="pricing-period">/month</div>
               <div className="pricing-save">$9,590/yr (Save 20%)</div>
@@ -174,8 +230,12 @@ const PatLanding: React.FC = () => {
                 <li>Crisis management support</li>
               </ul>
 
-              <a href="#contact" className="pricing-cta">Apply for PAT PRO →</a>
-              <div className="pricing-subtext">Limited to 10 projects/month</div>
+              <a href="#contact" className="pricing-cta">
+                Apply for PAT PRO →
+              </a>
+              <div className="pricing-subtext">
+                Limited to 10 projects/month
+              </div>
             </div>
           </div>
         </div>
@@ -186,15 +246,21 @@ const PatLanding: React.FC = () => {
           <h3>Trusted by ambitious Web3 founders and communities worldwide</h3>
           <div className="testimonials">
             <div className="testimonial">
-              <p className="testimonial-quote">"PAT cut our moderation workload by 80%."</p>
+              <p className="testimonial-quote">
+                "PAT cut our moderation workload by 80%."
+              </p>
               <p className="testimonial-author">— Mia, DAO Founder</p>
             </div>
             <div className="testimonial">
-              <p className="testimonial-quote">"Our retention jumped 40% after adding PAT DM flows."</p>
+              <p className="testimonial-quote">
+                "Our retention jumped 40% after adding PAT DM flows."
+              </p>
               <p className="testimonial-author">— Julian, NFT Project Lead</p>
             </div>
             <div className="testimonial">
-              <p className="testimonial-quote">"Best investment we made for our community growth."</p>
+              <p className="testimonial-quote">
+                "Best investment we made for our community growth."
+              </p>
               <p className="testimonial-author">— Sarah, Web3 Builder</p>
             </div>
           </div>
@@ -205,13 +271,26 @@ const PatLanding: React.FC = () => {
         <div className="container">
           <h2>
             Your community deserves
-            <br />better than chaos.
+            <br />
+            better than chaos.
           </h2>
           <p>Let PAT automate the noise so you can focus on building.</p>
-          <div className="urgency-text">⚡ Only 10 PRO management slots available this month</div>
+          <div className="urgency-text">
+            ⚡ Only 10 PRO management slots available this month
+          </div>
           <div>
-            <a href="mailto:hello@pat.community?subject=PAT%20PLUS%20Inquiry" className="cta-large">Get PAT PLUS</a>
-            <a href="mailto:hello@pat.community?subject=PAT%20PRO%20Application" className="cta-secondary">Apply for PRO</a>
+            <a
+              href="mailto:hello@pat.community?subject=PAT%20PLUS%20Inquiry"
+              className="cta-large"
+            >
+              Get PAT PLUS
+            </a>
+            <a
+              href="mailto:hello@pat.community?subject=PAT%20PRO%20Application"
+              className="cta-secondary"
+            >
+              Apply for PRO
+            </a>
           </div>
         </div>
       </section>
@@ -219,15 +298,24 @@ const PatLanding: React.FC = () => {
       <footer>
         <div className="container">
           <div className="footer-content">
-            <div className="logo">PAT</div>
+            <img src={Logo} alt="Pat logo" className="w-20 h-20" />
+
             <ul className="footer-links">
-              <li><a href="#pricing">Pricing</a></li>
-              <li><a href="#story">Why PAT</a></li>
-              <li><a href="mailto:hello@pat.community">Contact</a></li>
+              <li>
+                <a href="#pricing">Pricing</a>
+              </li>
+              <li>
+                <a href="#story">Why PAT</a>
+              </li>
+              <li>
+                <a href="mailto:hello@pat.community">Contact</a>
+              </li>
             </ul>
           </div>
           <div className="footer-bottom">
-            <p style={{ marginBottom: 16, color: '#888' }}>PAT is designed to grow</p>
+            <p style={{ marginBottom: 16, color: "#888" }}>
+              PAT is designed to grow
+            </p>
           </div>
         </div>
       </footer>
