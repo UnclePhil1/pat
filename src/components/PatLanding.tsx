@@ -21,7 +21,7 @@ const PatLanding: React.FC = () => {
               <a href="mailto:Afrinix247@gmail.com">Contact</a>
             </li>
             <li>  
-              <a href="/pitch" className="nav-cta">
+              <a href="https://pitch.patassist.xyz/" className="nav-cta">
                 Pitch Deck
               </a>
             </li>
