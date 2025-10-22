@@ -14,7 +14,18 @@ import IndexPage from "./pages/IndexPage";
 import PatLanding from "./components/PatLanding";
 
 function App() {
-  const path = typeof window !== 'undefined' ? window.location.pathname : '/';
+  const isBrowser = typeof window !== 'undefined';
+  const host = isBrowser ? window.location.host : '';
+  const path = isBrowser ? window.location.pathname : '/';
+
+  // If user visits the pitch subdomain, force the client route to /pitch
+  if (host === 'pitch.patassist.xyz') {
+    if (isBrowser && path !== '/pitch') {
+      // update the URL without reloading so client-side code sees /pitch
+      window.history.replaceState({}, '', '/pitch');
+    }
+    return <IndexPage />;
+  }
 
   if (path === '/pitch') {
     return <IndexPage />;
