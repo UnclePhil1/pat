@@ -10,24 +10,18 @@ import "./App.css";
 // import Setup from "./components/setUp";
 // import Solution from "./components/solution";
 // import Waitlist from "./components/waitlist";
+import IndexPage from "./pages/IndexPage";
 import PatLanding from "./components/PatLanding";
 
 function App() {
+  const path = typeof window !== 'undefined' ? window.location.pathname : '/';
+
+  if (path === '/pitch') {
+    return <IndexPage />;
+  }
+
   return (
     <>
-      {/* <Toaster />
-      <div className="p-6">
-        <Navbar />
-        <Header />
-        <section id="problem"><Problem /></section>
-        <section id="solution"><Solution /></section>
-        <section id="howitworks"><HowItWorks /></section>
-        <section id="setup"><Setup /></section>
-        <section id="founders"><Founders /></section>
-        <section id="waitlist"><Waitlist /></section>
-        <section id="formwaitlist"><FormWaitList /></section>
-      </div>
-      <Footer /> */}
       <PatLanding />
     </>
   );
