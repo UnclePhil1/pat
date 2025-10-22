@@ -18,8 +18,11 @@ const PatLanding: React.FC = () => {
               <a href="#story">Why PAT</a>
             </li>
             <li>
-              <a href="#contact" className="nav-cta">
-                Get Started
+              <a href="mailto:Afrinix247@gmail.com">Contact</a>
+            </li>
+            <li>  
+              <a href="/pitch" className="nav-cta">
+                Pitch Deck
               </a>
             </li>
           </ul>
@@ -39,8 +42,7 @@ const PatLanding: React.FC = () => {
             Growth Engine
           </h1>
           <p className="hero-subheadline">
-            PAT automates moderation, runs DM campaigns, and manages your
-            community — so you can focus on building the future.
+            PAT automates moderation, runs DM campaigns, and manages your community so you can focus on building the future.
           </p>
           <a href="#pricing" className="cta-primary">
             Choose Your Plan →
@@ -56,8 +58,7 @@ const PatLanding: React.FC = () => {
             you ignore your Telegram community.
           </h2>
           <p className="story-subheadline">
-            The biggest reason Web3 projects fail isn't the tech — it's
-            community fatigue.
+            The biggest reason Web3 projects fail isn't the tech. It's community fatigue.
           </p>
 
           <div className="story-content">
@@ -173,7 +174,7 @@ const PatLanding: React.FC = () => {
                 <li>Up to 2,000 community members</li>
               </ul>
 
-              <a href="#contact" className="pricing-cta">
+              <a href="https://calendly.com/afrinix247/pat-onboarding" target="_blank" rel="noopener noreferrer" className="pricing-cta">
                 Start for $99 →
               </a>
               <div className="pricing-subtext">Try risk-free for 14 days</div>
@@ -201,7 +202,7 @@ const PatLanding: React.FC = () => {
                 <li>Up to 10,000 members</li>
               </ul>
 
-              <a href="#contact" className="pricing-cta">
+              <a href="https://calendly.com/afrinix247/pat-onboarding" target="_blank" rel="noopener noreferrer" className="pricing-cta">
                 Get PAT PLUS →
               </a>
               <div className="pricing-subtext">
@@ -230,7 +231,7 @@ const PatLanding: React.FC = () => {
                 <li>Crisis management support</li>
               </ul>
 
-              <a href="#contact" className="pricing-cta">
+              <a href="https://calendly.com/afrinix247/pat-onboarding" target="_blank" rel="noopener noreferrer" className="pricing-cta">
                 Apply for PAT PRO →
               </a>
               <div className="pricing-subtext">
@@ -280,13 +281,13 @@ const PatLanding: React.FC = () => {
           </div>
           <div>
             <a
-              href="mailto:hello@pat.community?subject=PAT%20PLUS%20Inquiry"
+              href="mailto:Afrinix247@gmail.com?subject=PAT%20PLUS%20Inquiry"
               className="cta-large"
             >
               Get PAT PLUS
             </a>
             <a
-              href="mailto:hello@pat.community?subject=PAT%20PRO%20Application"
+              href="mailto:Afrinix247@gmail.com?subject=PAT%20PRO%20Application"
               className="cta-secondary"
             >
               Apply for PRO
@@ -308,7 +309,7 @@ const PatLanding: React.FC = () => {
                 <a href="#story">Why PAT</a>
               </li>
               <li>
-                <a href="mailto:hello@pat.community">Contact</a>
+                <a href="mailto:Afrinix247@gmail.com">Contact</a>
               </li>
             </ul>
           </div>
