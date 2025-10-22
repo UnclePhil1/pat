@@ -91,15 +91,15 @@ const IndexPage: React.FC = () => {
             <div className="w-full">
               <h2 className="text-4xl sm:text-5xl font-bold text-center bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent mb-12">Your Team is Trapped in "The Bottleneck"</h2>
               <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div className="bg-gray-900/50 p-6 rounded-lg">
+                <div className="bg-gray-900/50 p-6 rounded-lg border border-secondary/10">
                   <h3 className="text-xl sm:text-2xl font-bold text-blue-400 mb-3">The Support Drain</h3>
                   <p className="text-gray-400">Answering the <span className="text-white">same</span> questions 24/7 ("when token?", "how to stake?") burns out your most dedicated team members.</p>
                 </div>
-                <div className="bg-gray-900/50 p-6 rounded-lg">
+                <div className="bg-gray-900/50 p-6 rounded-lg border border-secondary/10">
                   <h3 className="text-xl sm:text-2xl font-bold text-purple-400 mb-3">The Engagement Gap</h3>
                   <p className="text-gray-400">Critical updates and campaigns get <span className="text-white">lost in the noise</span>, leading to low participation and a disconnected community.</p>
                 </div>
-                <div className="bg-gray-900/50 p-6 rounded-lg">
+                <div className="bg-gray-900/50 p-6 rounded-lg border border-secondary/10">
                   <h3 className="text-xl sm:text-2xl font-bold text-red-400 mb-3">The Security Risk</h3>
                   <p className="text-gray-400">Unmonitored chats become breeding grounds for <span className="text-white">spam, scams, and FUD</span>, eroding the trust you work so hard to build.</p>
                 </div>
