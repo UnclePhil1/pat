@@ -61,6 +61,139 @@ const IndexPage: React.FC = () => {
     };
   }, []);
 
+  // Slides 6-10 (converted from the original HTML) as an array so we can map them into the DOM
+  const extraSlides: React.ReactNode[] = [
+    (
+      <div key={6} className="slide" data-slide="6">
+        <div className="w-full">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent mb-4">Your New Growth Engine</h2>
+          <p className="text-xl sm:text-2xl text-center text-gray-300 mb-12">PAT is engineered to maximize your two most valuable resources: Time and Trust.</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gray-900/50 p-6 rounded-lg border border-blue-500/30">
+              <h3 className="text-2xl font-bold text-blue-400 mb-4">Establish Unshakable Trust</h3>
+              <p className="text-gray-300">PAT provides instant, accurate answers 24/7 and proactively removes spam, malicious links, and FUD before they can spread.</p>
+            </div>
+            <div className="bg-gray-900/50 p-6 rounded-lg border border-purple-500/30">
+              <h3 className="text-2xl font-bold text-purple-400 mb-4">Drive User Retention</h3>
+              <p className="text-gray-300">She keeps users active and loyal with hyper-personalized DM updates and interactive "how-to" guides for complex actions.</p>
+            </div>
+            <div className="bg-gray-900/50 p-6 rounded-lg border border-green-500/30">
+              <h3 className="text-2xl font-bold text-green-400 mb-4">Accelerate Growth</h3>
+              <p className="text-gray-300">PAT turns your community into a powerful acquisition channel with built-in referral tracking and targeted, direct-to-member campaigns.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+
+    (
+      <div key={7} className="slide" data-slide="7">
+        <div className="w-full">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent mb-12">A Look Inside the PAT Engine</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gray-900/50 p-6 rounded-lg">
+              <h3 className="font-bold text-xl sm:text-2xl text-white mb-2">Instant, AI-Powered Support</h3>
+              <p className="text-gray-400">Stop the endless "when token?" questions. PAT answers any community question accurately in under 8 seconds, drawing directly from your whitepaper and docs.</p>
+            </div>
+            <div className="bg-gray-900/50 p-6 rounded-lg">
+              <h3 className="font-bold text-xl sm:text-2xl text-white mb-2">Direct-to-Member Broadcasts</h3>
+              <p className="text-gray-400">Cut through the noise. PAT delivers critical updates, airdrop notifications, and campaigns directly to your members' DMs for maximum impact.</p>
+            </div>
+            <div className="bg-gray-900/50 p-6 rounded-lg">
+              <h3 className="font-bold text-xl sm:text-2xl text-white mb-2">Interactive "How-To" Guides</h3>
+              <p className="text-gray-400">Turn complexity into simplicity. PAT provides step-by-step tutorials for key project actions like staking, minting, or voting, reducing user friction.</p>
+            </div>
+            <div className="bg-gray-900/50 p-6 rounded-lg">
+              <h3 className="font-bold text-xl sm:text-2xl text-white mb-2">Built-in Referral Tracking</h3>
+              <p className="text-gray-400">Finally, a growth tool that works. PAT seamlessly manages and tracks referral campaigns, helping you measure ROI and accelerate user acquisition.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+
+    (
+      <div key={8} className="slide" data-slide="8">
+        <div className="w-full">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent mb-8">The Verdict from Our Beta Testers</h2>
+          <p className="text-xl text-center text-gray-300 mb-10">Founders and community leaders who tested PAT are calling it a game-changer.</p>
+          <div className="space-y-8">
+            <blockquote className="bg-gray-900/50 p-6 rounded-lg border-l-4 border-purple-400">
+              <p className="text-xl italic text-white">"PAT is impressive. It’s super responsive, gives accurate answers fast, and the friendly, confident tone builds trust. The clear, easy-to-follow explanations are a game-changer."</p>
+              <cite className="block text-right mt-4 not-italic text-purple-300">— Community Manager (Beta Tester)</cite>
+            </blockquote>
+            <div className="grid md:grid-cols-2 gap-8">
+              <blockquote className="bg-gray-900/50 p-6 rounded-lg">
+                <p className="text-md italic text-gray-300">"I like the fact that it provided answers to broad questions such as the project's web3 experience since it's beginning. It also provided links to its social handles."</p>
+                <cite className="block text-right mt-4 not-italic text-gray-400">— Founder, PSP (Beta Tester)</cite>
+              </blockquote>
+              <blockquote className="bg-gray-900/50 p-6 rounded-lg">
+                <p className="text-md italic text-gray-300">"PAT is performing really well as an AI moderator. It’s proactive, responsive, and keeps the conversation flowing smoothly."</p>
+                <cite className="block text-right mt-4 not-italic text-gray-400">— Community Member (Beta Tester)</cite>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+
+    (
+      <div key={9} className="slide" data-slide="9">
+        <div className="w-full">
+          <h2 className="text-4xl sm:text-5xl font-bold text-center bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent mb-8">The Modern Solution for Community Growth</h2>
+          <p className="text-lg sm:text-xl text-center text-gray-300 mb-10">PAT isn't just better than a bot; it's smarter and more efficient than hiring a large team.</p>
+          <div className="grid md:grid-cols-3 gap-6 text-sm">
+            <div className="bg-gray-900/50 border border-gray-700/50 p-4 rounded-lg">
+              <h3 className="text-lg font-bold text-gray-400 mb-4 text-center">Standard Bots</h3>
+              <ul className="space-y-3 text-gray-400">
+                <li><span className="font-semibold text-red-400">Reactive:</span> Only respond to basic commands.</li>
+                <li><span className="font-semibold text-red-400">Noisy:</span> Clog up the main chat with bot clutter.</li>
+                <li><span className="font-semibold text-red-400">Limited:</span> Can't understand context or complex questions.</li>
+              </ul>
+            </div>
+            <div className="bg-gray-900/50 border border-gray-700/50 p-4 rounded-lg">
+              <h3 className="text-lg font-bold text-gray-400 mb-4 text-center">Human Mod Team</h3>
+              <ul className="space-y-3 text-gray-400">
+                <li><span className="font-semibold text-red-400">Expensive:</span> High salary and overhead costs.</li>
+                <li><span className="font-semibold text-red-400">Inconsistent:</span> Quality varies by person and time of day.</li>
+                <li><span className="font-semibold text-red-400">Slow:</span> Can't provide instant answers 24/7.</li>
+                <li><span className="font-semibold text-red-400">Burnout:</span> Prone to fatigue from repetitive tasks.</li>
+              </ul>
+            </div>
+            <div className="bg-green-500/10 border border-green-500/30 p-4 rounded-lg ring-2 ring-green-500/50">
+              <h3 className="text-lg font-bold text-green-300 mb-4 text-center">The PAT Engine</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li><span className="font-semibold text-green-300">Intelligent:</span> Understands context and answers complex questions 24/7.</li>
+                <li><span className="font-semibold text-green-300">Direct:</span> Cuts through noise with targeted DMs.</li>
+                <li><span className="font-semibold text-green-300">Cost-Effective:</span> One PAT handles the work of multiple mods.</li>
+                <li><span className="font-semibold text-green-300">Perfectly Consistent:</span> Delivers the right answer, in your voice, every time.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+
+    (
+      <div key={10} className="slide text-center" data-slide="10">
+        <div className="w-full">
+          <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent mb-4">Book Your Personalized Demo</h2>
+          <p className="text-xl sm:text-2xl text-white font-medium max-w-2xl mx-auto mb-8">See the PAT Engine in action and let us show you how she can be trained for <span className="text-purple-400">your</span> project.</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+            <div className="bg-white p-4 rounded-lg">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://calendly.com/samuelnssien001/pat-demo" alt="QR Code for Demo Booking" className="w-40 h-40 sm:w-48 sm:h-48" />
+            </div>
+            <div className="text-left">
+              <a href="https://calendly.com/samuelnssien001/pat-demo" target="_blank" rel="noopener noreferrer" className="text-2xl sm:text-3xl font-bold text-blue-400 hover:text-blue-300 transition-colors break-all">Book on Calendly</a>
+              <p className="mt-6 text-2xl font-bold text-white">Stop Managing.</p>
+              <p className="text-2xl font-bold text-green-400">Start Building.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    ),
+  ];
+
   return (
     <div className="h-screen w-screen bg-gray-900 text-gray-200 flex items-center justify-center p-4">
       <div className="w-full max-w-6xl h-full bg-gray-800 border border-gray-700 rounded-lg shadow-2xl flex flex-col relative overflow-hidden">
@@ -139,7 +272,8 @@ const IndexPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Slides 6-10 omitted here for brevity; included in file */}
+          {/* Render slides 6-10 from the extraSlides array */}
+          {extraSlides.map((s) => s)}
 
         </div>
 
