@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../public/images/logow.svg";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import XIcon from "@mui/icons-material/X";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const PatLanding: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div>
       <div className="gradient-bg" />
@@ -9,6 +14,22 @@ const PatLanding: React.FC = () => {
       <div className="container">
         <nav>
           <img src={Logo} alt="Pat logo" className="w-20 h-20" />
+
+          {/* Mobile menu button (visible on small screens) */}
+          <button
+            className="mobile-menu-button"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((s) => !s)}
+            style={{
+              background: "transparent",
+              border: "none",
+              color: "inherit",
+              cursor: "pointer",
+            }}
+          >
+            {menuOpen ? <span>X</span> : <MenuIcon className="w-6 h-6" />}
+          </button>
 
           <ul className="nav-links">
             <li>
@@ -20,12 +41,60 @@ const PatLanding: React.FC = () => {
             <li>
               <a href="mailto:Afrinix247@gmail.com">Contact</a>
             </li>
-            <li>  
+            <li>
               <a href="https://pitch.patassist.xyz/" className="nav-cta">
                 Pitch Deck
               </a>
             </li>
           </ul>
+
+          {/* Mobile dropdown rendered when menuOpen on small screens */}
+          <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+            {/* Close button inside the dropdown (top-right) */}
+            <button
+              className="mobile-close"
+              aria-label="Close menu"
+              onClick={() => setMenuOpen(false)}
+              style={{
+                background: "transparent",
+                border: "none",
+                color: "inherit",
+                cursor: "pointer",
+              }}
+            >
+              X
+            </button>
+
+            <ul>
+              <li>
+                <a href="#pricing" onClick={() => setMenuOpen(false)}>
+                  Pricing
+                </a>
+              </li>
+              <li>
+                <a href="#story" onClick={() => setMenuOpen(false)}>
+                  Why PAT
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:Afrinix247@gmail.com"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://pitch.patassist.xyz/"
+                  className="nav-cta"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Pitch Deck
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
 
@@ -42,7 +111,8 @@ const PatLanding: React.FC = () => {
             Growth Engine
           </h1>
           <p className="hero-subheadline">
-            PAT automates moderation, runs DM campaigns, and manages your community so you can focus on building the future.
+            PAT automates moderation, runs DM campaigns, and manages your
+            community so you can focus on building the future.
           </p>
           <a href="#pricing" className="cta-primary">
             Choose Your Plan →
@@ -58,15 +128,15 @@ const PatLanding: React.FC = () => {
             you ignore your Telegram community.
           </h2>
           <p className="story-subheadline">
-            The biggest reason Web3 projects fail isn't the tech. It's community fatigue.
+            The biggest reason Web3 projects fail isn't the tech. It's community
+            fatigue.
           </p>
 
           <div className="story-content">
             <p>
-              Every founder starts with hype then burnout hits. 24/7
-              questions. Spam bots. Silent channels. Missed updates. Before
-              long, the community you worked so hard to build turns into a ghost
-              town.
+              Every founder starts with hype then burnout hits. 24/7 questions.
+              Spam bots. Silent channels. Missed updates. Before long, the
+              community you worked so hard to build turns into a ghost town.
             </p>
 
             <p>
@@ -78,7 +148,7 @@ const PatLanding: React.FC = () => {
             </p>
 
             <p>
-              And when you choose the PRO plan, you get our human team on top 
+              And when you choose the PRO plan, you get our human team on top
               crafting engagement, running events, and growing your community
               like a full-time Web3 manager (without the $3k/month salary).
             </p>
@@ -154,77 +224,105 @@ const PatLanding: React.FC = () => {
 
       <section className="pricing-section" id="pricing">
         <div className="container">
-            <div className="pricing-grid">
-                <div className="pricing-card">
-                    <div className="pricing-icon">🧠</div>
-                    <h3 className="pricing-name">PAT BASIC</h3>
-                    <p className="pricing-tagline">Let PAT handle the chaos: your community, always protected.</p>
-                    <div className="pricing-price">$99</div>
-                    <div className="pricing-period">/month</div>
-                    <div className="pricing-save">$950/yr (Save 20%)</div>
-                    
-                    <ul className="pricing-features">
-                        <li>24/7 moderation (spam, links, language)</li>
-                        <li>&lt;8s response time to member questions</li>
-                        <li>Auto-welcome & onboarding messages</li>
-                        <li>Weekly analytics report</li>
-                        <li>1 DM campaign per month</li>
-                        <li>Up to 2,000 community members</li>
-                    </ul>
-                    
-                    <a href="https://calendly.com/afrinix247/pat-onboarding" className="pricing-cta" target="_blank">Start for $99 →</a>
-                    <div className="pricing-subtext">Try risk-free for 14 days</div>
-                </div>
+          <div className="pricing-grid">
+            <div className="pricing-card">
+              <div className="pricing-icon">🧠</div>
+              <h3 className="pricing-name">PAT BASIC</h3>
+              <p className="pricing-tagline">
+                Let PAT handle the chaos: your community, always protected.
+              </p>
+              <div className="pricing-price">$99</div>
+              <div className="pricing-period">/month</div>
+              <div className="pricing-save">$950/yr (Save 20%)</div>
 
-                <div className="pricing-card popular">
-                    <div className="popular-badge">🔥 Most Popular</div>
-                    <div className="pricing-icon">🚀</div>
-                    <h3 className="pricing-name">PAT PLUS</h3>
-                    <p className="pricing-tagline">Automation meets growth: campaigns, data, and engagement on autopilot.</p>
-                    <div className="pricing-price">$299</div>
-                    <div className="pricing-period">/month</div>
-                    <div className="pricing-save">$2,870/yr (Save 20%)</div>
-                    
-                    <ul className="pricing-features">
-                        <li>Everything in Basic, plus:</li>
-                        <li>4 DM campaigns/month</li>
-                        <li>Advanced analytics (referrals, retention, engagement)</li>
-                        <li>Monthly growth check-in with PAT team</li>
-                        <li>Engagement templates & content calendar</li>
-                        <li>Priority onboarding (24h response)</li>
-                        <li>Up to 10,000 members</li>
-                    </ul>
-                    
-                    <a href="https://calendly.com/afrinix247/pat-onboarding" className="pricing-cta" target="_blank">Get PAT PLUS →</a>
-                    <div className="pricing-subtext">Most founders start here. Proven ROI in 30 days</div>
-                </div>
+              <ul className="pricing-features">
+                <li>24/7 moderation (spam, links, language)</li>
+                <li>&lt;8s response time to member questions</li>
+                <li>Auto-welcome & onboarding messages</li>
+                <li>Weekly analytics report</li>
+                <li>1 DM campaign per month</li>
+                <li>Up to 2,000 community members</li>
+              </ul>
 
-                <div className="pricing-card pro">
-                    <div className="pricing-icon">👑</div>
-                    <h3 className="pricing-name">PAT PRO</h3>
-                    <p className="pricing-tagline">We don't just automate. We run your community.</p>
-                    <div className="pricing-price">$999</div>
-                    <div className="pricing-period">/month</div>
-                    <div className="pricing-save">$9,590/yr (Save 20%)</div>
-                    
-                    <ul className="pricing-features">
-                        <li>Everything in PLUS, plus:</li>
-                        <li>Dedicated community manager (daily engagement)</li>
-                        <li>Weekly activity calendar + content planning</li>
-                        <li>Unlimited DM campaigns</li>
-                        <li>Bi-weekly analytics & performance review</li>
-                        <li>Custom growth campaigns (airdrops, referrals)</li>
-                        <li>24/7 human + AI moderation</li>
-                        <li>Crisis management support</li>
-                    </ul>
-                    
-                    <a href="https://calendly.com/afrinix247/pat-onboarding" className="pricing-cta" target="_blank">Apply for PAT PRO →</a>
-                    <div className="pricing-subtext">Limited to 10 projects/month</div>
-                </div>
+              <a
+                href="https://calendly.com/afrinix247/pat-onboarding"
+                className="pricing-cta"
+                target="_blank"
+              >
+                Start for $99 →
+              </a>
+              <div className="pricing-subtext">Try risk-free for 14 days</div>
             </div>
-        </div>
-    </section>
 
+            <div className="pricing-card popular">
+              <div className="popular-badge">🔥 Most Popular</div>
+              <div className="pricing-icon">🚀</div>
+              <h3 className="pricing-name">PAT PLUS</h3>
+              <p className="pricing-tagline">
+                Automation meets growth: campaigns, data, and engagement on
+                autopilot.
+              </p>
+              <div className="pricing-price">$299</div>
+              <div className="pricing-period">/month</div>
+              <div className="pricing-save">$2,870/yr (Save 20%)</div>
+
+              <ul className="pricing-features">
+                <li>Everything in Basic, plus:</li>
+                <li>4 DM campaigns/month</li>
+                <li>Advanced analytics (referrals, retention, engagement)</li>
+                <li>Monthly growth check-in with PAT team</li>
+                <li>Engagement templates & content calendar</li>
+                <li>Priority onboarding (24h response)</li>
+                <li>Up to 10,000 members</li>
+              </ul>
+
+              <a
+                href="https://calendly.com/afrinix247/pat-onboarding"
+                className="pricing-cta"
+                target="_blank"
+              >
+                Get PAT PLUS →
+              </a>
+              <div className="pricing-subtext">
+                Most founders start here. Proven ROI in 30 days
+              </div>
+            </div>
+
+            <div className="pricing-card pro">
+              <div className="pricing-icon">👑</div>
+              <h3 className="pricing-name">PAT PRO</h3>
+              <p className="pricing-tagline">
+                We don't just automate. We run your community.
+              </p>
+              <div className="pricing-price">$999</div>
+              <div className="pricing-period">/month</div>
+              <div className="pricing-save">$9,590/yr (Save 20%)</div>
+
+              <ul className="pricing-features">
+                <li>Everything in PLUS, plus:</li>
+                <li>Dedicated community manager (daily engagement)</li>
+                <li>Weekly activity calendar + content planning</li>
+                <li>Unlimited DM campaigns</li>
+                <li>Bi-weekly analytics & performance review</li>
+                <li>Custom growth campaigns (airdrops, referrals)</li>
+                <li>24/7 human + AI moderation</li>
+                <li>Crisis management support</li>
+              </ul>
+
+              <a
+                href="https://calendly.com/afrinix247/pat-onboarding"
+                className="pricing-cta"
+                target="_blank"
+              >
+                Apply for PAT PRO →
+              </a>
+              <div className="pricing-subtext">
+                Limited to 10 projects/month
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="social-proof">
         <div className="container">
@@ -284,7 +382,6 @@ const PatLanding: React.FC = () => {
         <div className="container">
           <div className="footer-content">
             <img src={Logo} alt="Pat logo" className="w-20 h-20" />
-
             <ul className="footer-links">
               <li>
                 <a href="#pricing">Pricing</a>
@@ -296,6 +393,28 @@ const PatLanding: React.FC = () => {
                 <a href="mailto:Afrinix247@gmail.com">Contact</a>
               </li>
             </ul>
+            <div className="footer-links">
+              <div className="p-6 flex items-center justify-center hover:bg-slate-800/50 transition-colors duration-200 col-span-2 sm:col-span-1">
+                <a
+                  href="https://x.com/ProjectAsst_xyz?t=TdaLx3j9AipwiJtBUhn9GQ&s=09"
+                  aria-label="X"
+                  className="text-white/70 hover:text-white"
+                  target="_blank"
+                >
+                  <XIcon className="w-6 h-6" />
+                </a>
+              </div>
+              <div className="p-6 flex items-center justify-center hover:bg-slate-800/50 transition-colors duration-200 col-span-2 sm:col-span-1">
+                <a
+                  href="https://t.me/UncleSam_001"
+                  aria-label="Email"
+                  className="text-white/70 hover:text-white"
+                  target="_blank"
+                >
+                  <TelegramIcon className="w-6 h-6" />
+                </a>
+              </div>
+            </div>
           </div>
           <div className="footer-bottom">
             <p style={{ marginBottom: 16, color: "#888" }}>
@@ -335,13 +454,14 @@ const PatLanding: React.FC = () => {
             padding: 0 24px;
         }
 
-        nav {
-            padding: 32px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
+    nav {
+      position: relative;
+      padding: 32px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
 
         .logo {
             font-size: 32px;
@@ -371,6 +491,47 @@ const PatLanding: React.FC = () => {
         .nav-links a:hover {
             color: #2a69a8;
         }
+
+    .mobile-menu-button {
+      display: none;
+      background: transparent;
+      border: none;
+      color: inherit;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 100%;
+      background: rgba(10, 15, 26, 0.98);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      padding: 48px 0 12px; /* extra top padding so content sits below nav */
+      border-radius: 0 0 10px 10px;
+      z-index: 60;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu ul { list-style: none; margin: 0; padding: 0 16px; display: flex; flex-direction: column; gap: 4px; }
+    .mobile-menu a { color: #ddd; text-decoration: none; padding: 12px 16px; display: block; border-radius: 6px; }
+    .mobile-menu a:hover { background: rgba(255,255,255,0.03); color: #fff; }
+
+    .mobile-close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: transparent;
+      border: none;
+      color: #ddd;
+      cursor: pointer;
+      z-index: 70;
+    }
 
         .nav-cta {
             padding: 12px 28px;
@@ -943,6 +1104,17 @@ const PatLanding: React.FC = () => {
             .nav-links {
                 display: none;
             }
+
+      .mobile-menu-button {
+        display: block;
+      }
+
+      /* mobile menu stays fixed to the top of the viewport on small screens */
+      .mobile-menu {
+        left: 0;
+        right: 0;
+        top: 0;
+      }
 
             .pricing-grid {
                 grid-template-columns: 1fr;
